@@ -1,61 +1,87 @@
-****All The Codes are in Peer2Peer/Src folder in runnable Condition****
+💬 Java Peer-to-Peer Chat System
+This Java project lets two peers chat with each other using sockets, in a step-by-step way — starting from simple messages on the same PC to full messaging between two computers on a local network.
 
-****P2P Lab — Peer-to-Peer Chat Application****
+Built for understanding P2P architecture, message sending, socket handling, and port communication.
 
-Welcome to the P2P Lab!
-This project demonstrates a simple Peer-to-Peer chatting application built in Java. The application evolves through 4 phases, adding features and complexity in each step.
+🎯 What You’ll Need
+Java (JDK 8 or above)
 
-****Project Structure****
+NetBeans IDE (Recommended)
 
-Phase1_Peer.java — Basic one-time message send/receive on the same machine.
+🛠 Phases (Project Versions)
+The lab is organized into 4 progressive phases, each adding more capability:
 
-Phase2_Peer.java — Send multiple messages until typing exit, on the same machine.
+🔹 Phase 1: One-Time Message on Same PC
+📄 File: Phase1_Peer.java
 
-Phase3_PeerA.java & Phase3_PeerB.java — Two peers chatting on the same machine using different ports.
+Run the program.
 
-Phase4_PeerA.java & Phase4_PeerB.java — Two peers chatting between two different machines on the same network.
+It opens a socket on localhost:5000.
 
-****How to Run Each Phase****
+Sends a single message and receives it back.
 
+Useful to test initial setup and socket communication.
 
-****Phase 1: Single Message Exchange (Same Machine)****
+✅ Goal: Understand basic socket creation and message flow.
 
-Run Phase1_Peer.java.
+🔸 Phase 2: Continuous Messaging (Same PC)
+📄 File: Phase2_Peer.java
 
-The program listens on port 5000 for one incoming message, then sends a single message to itself.
+Run the code — it listens on port 5001.
 
-It prints the received message.
+Type messages and send them one by one.
 
-****Phase 2: Continuous Messaging Until Exit (Same Machine)****
+Type exit to stop.
 
-Run Phase2_Peer.java.
+Shows how to keep a socket running to handle multiple messages.
 
-The program listens on port 5001 and can receive multiple messages.
+✅ Goal: Enable ongoing messaging using Java sockets.
 
-You can type and send multiple messages until you type exit to quit.
+🖥️ Phase 3: Chat Between Two Peers on One PC
+📄 Files:
 
-****Phase 3: Chatting Between Two Peers on the Same Machine****
+Phase3_PeerA.java
 
-Run Phase3_PeerA.java and Phase3_PeerB.java on the same machine (two separate programs).
+Phase3_PeerB.java
 
-PeerA listens on port 6000, PeerB listens on port 6001.
+Peer A listens on port 6000, Peer B on 6001.
 
-You can chat back and forth by typing messages in each program’s console.
+Run both in separate terminal windows (or NetBeans tabs).
 
-Type exit to quit.
+Type and send messages in both directions.
 
-****Phase 4: Chatting Between Two Different Machines on the Same Network****
+✅ Goal: Build a two-way chat between two programs using different ports.
 
-Run Phase4_PeerA.java on the first machine (e.g., IP: 192.168.70.109).
+🌐 Phase 4: Chat Between Two Devices (LAN)
+📄 Files:
 
-Run Phase4_PeerB.java on the second machine (e.g., IP: 192.168.70.110).
+Phase4_PeerA.java (on your PC)
 
-Each peer listens on a dedicated port (6000 for PeerA, 6001 for PeerB).
+Phase4_PeerB.java (on your classmate’s PC)
 
-Make sure both machines are connected to the same network.
+🖧 Requirements:
 
-Add firewall rules to allow inbound/outbound traffic on these ports.
+Both PCs must be on the same Wi-Fi or LAN
 
-You can now chat across machines.
+Use each other's IP address and port
 
-Type exit to quit.
+👣 Steps:
+On Computer A (e.g., 192.168.70.109):
+
+Run Phase4_PeerA.java
+
+It listens on port 6000
+
+On Computer B (e.g., 192.168.70.110):
+
+Run Phase4_PeerB.java
+
+It sends to IP 192.168.70.109, port 6000
+
+💡 Find your IP:
+
+On Windows: ipconfig
+
+On Mac/Linux: ifconfig or ip a
+
+✅ Goal: Real-time chat between two users across machines.
