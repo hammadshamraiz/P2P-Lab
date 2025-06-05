@@ -1,4 +1,5 @@
 💬 Java Peer-to-Peer Chat System
+
 This Java project lets two peers chat with each other using sockets, in a step-by-step way — starting from simple messages on the same PC to full messaging between two computers on a local network.
 
 Built for understanding P2P architecture, message sending, socket handling, and port communication.
