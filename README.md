@@ -1,3 +1,5 @@
+****All The Codes are in Peer2Peer/Src folder in runnable Condition****
+
 ****P2P Lab — Peer-to-Peer Chat Application****
 
 Welcome to the P2P Lab!
